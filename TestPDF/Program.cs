@@ -15,7 +15,7 @@ namespace TestPDF
 
             if(doc.AcroForm == null)
             {
-                Console.WriteLine("Erro ao ler os campos do PDF!");
+                Console.WriteLine("Error, PDF Form Not Found!");
                 return ;
             }
 
@@ -30,6 +30,7 @@ namespace TestPDF
                 form.Elements.Add("/NeedAppearances", new PdfBoolean(true));
             }
 
+            //Create fields 
             PdfTextField merchantPorfileOwnerField = (PdfTextField)(form.Fields["merchant_profile_owners_email_2"]);
             PdfCheckBoxField checkField = (PdfCheckBoxField)(form.Fields["seasson_Mar"]);
                     
